@@ -27,16 +27,16 @@ export async function POST(request: NextRequest) {
     }
 
     // Construction de l'URL de base
-    //const baseUrl = process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000";
+    const baseUrl = process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000";
 
     const checkoutData: CreateCheckoutSessionParams = {
       reference: body.reference,
       item_name: body.item_name,
       amount: Number(body.amount),
       currency: body.currency,
-      success_url: "https://monsite.com/success",
-      failure_url: "https://monsite.com/success",
-      webhook_url: "https://monsite.com/success",
+      success_url: `${baseUrl}/success`,
+      failure_url: `${baseUrl}/failure`,
+      webhook_url: `${baseUrl}/api/webhook`,
       metadata: {
         order_id: body.reference,
         user_email: body.metadata?.customer_email || body.customer?.email,
