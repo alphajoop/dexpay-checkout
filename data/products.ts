@@ -23,7 +23,7 @@ export const PRODUCTS: Product[] = [
     id: "3",
     name: "Chargeur Rapide USB-C",
     description: "Chargeur 65W avec compatibilité PD 3.0",
-    price: 105,
+    price: 205,
     currency: "XOF",
     image:
       "https://images.unsplash.com/photo-1618911138919-dcabd0bd6108?w=800&q=80",
