@@ -5,6 +5,10 @@ export interface Product {
   price: number;
   currency: string;
   image?: string;
+  rating?: number;
+  reviews?: number;
+  trending?: boolean;
+  tag?: string;
 }
 
 export interface CartItem extends Product {
